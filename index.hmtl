@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LeaseGuard LeasePro Onboarding Hub</title>
+<meta name="description" content="Onboarding hub for LeaseGuard's LeasePro Liability Waiver Program, renters insurance verification, daily monitoring, claims handling, and property team training." />
+<style>
+
+    :root{
+
+      --navy:#052b4f;
+
+      --deep:#031a33;
+
+      --gold:#f4c51c;
+
+      --sky:#eaf4fb;
+
+      --ink:#1d2b3a;
+
+      --muted:#5b6b7c;
+
+      --line:#d8e4ee;
+
+      --white:#ffffff;
+
+      --bg:#f6f9fc;
+
+      --success:#2d7d46;
+
+      --radius:18px;
+
+      --shadow:0 14px 38px rgba(3,26,51,.11);
+
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+
+    a{color:var(--navy)}
+
+    .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+    header{background:linear-gradient(135deg,var(--deep),var(--navy));color:var(--white);position:relative;overflow:hidden}
+
+    header:after{content:"";position:absolute;right:-90px;top:-70px;width:520px;height:240px;background:linear-gradient(135deg,rgba(244,197,28,.28),rgba(255,255,255,.08));transform:rotate(-8deg);clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);border-radius:28px;box-shadow:0 28px 70px rgba(0,0,0,.18)}
+
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;position:relative;z-index:1}
+
+    .logo{display:flex;align-items:center;gap:14px;min-width:230px}
+
+    .logo img{width:300px;max-width:100%;height:auto;object-fit:contain;background:transparent;padding:0;border-radius:0}
+
+    .logo-fallback{font-size:28px;font-weight:800;letter-spacing:.2px}.logo-fallback span{color:var(--gold)}
+
+    nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+
+    nav a{color:var(--white);text-decoration:none;font-weight:650;font-size:14px;opacity:.94;border:1px solid rgba(255,255,255,.22);padding:8px 12px;border-radius:999px}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 0 70px;position:relative;z-index:1}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(244,197,28,.14);border:1px solid rgba(244,197,28,.42);color:#fff7c7;padding:8px 12px;border-radius:999px;font-weight:750;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+
+    h1{font-size:clamp(38px,6vw,70px);line-height:.98;margin:20px 0 16px;letter-spacing:-.045em}
+
+    h2{font-size:30px;margin:0 0 12px;color:var(--navy);line-height:1.15;letter-spacing:-.02em}
+
+    h3{font-size:20px;margin:0 0 8px;color:var(--navy)}
+
+    p{margin:0 0 14px}.lead{font-size:20px;color:#d9e8f3;max-width:760px}.sublead{color:#aecaef;font-size:16px;max-width:760px}
+
+    .hero-card{background:rgba(255,255,255,.98);color:var(--ink);border-radius:24px;padding:28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.3)}
+
+    .stat{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;margin:18px 0}.stat b{display:grid;place-items:center;background:var(--sky);color:var(--navy);width:48px;height:48px;border-radius:14px;font-size:22px}.stat strong{display:block;color:var(--navy)}
+
+    main{padding:46px 0 70px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 22px rgba(3,26,51,.05)}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-5{grid-column:span 5}.span-12{grid-column:span 12}
+
+    .pill{display:inline-block;background:var(--sky);color:var(--navy);font-weight:800;border-radius:999px;padding:6px 10px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+
+    ul.clean{list-style:none;margin:14px 0 0;padding:0}.clean li{position:relative;padding:10px 0 10px 30px;border-top:1px solid var(--line)}.clean li:before{content:"✓";position:absolute;left:0;top:10px;color:var(--success);font-weight:900}.clean li:first-child{border-top:0}
+
+    .callout{border-left:6px solid var(--gold);background:#fff9d9;border-radius:14px;padding:18px 20px;margin-top:16px}.warning{border-left-color:#d27b2d;background:#fff2e6}.not{background:#fff5f5;border-color:#efb6b6}
+
+    .checklist{counter-reset:item;display:grid;gap:12px;margin-top:16px}.check{display:flex;gap:14px;align-items:flex-start;background:#fbfdff;border:1px solid var(--line);border-radius:16px;padding:15px}.box{width:24px;height:24px;border:2px solid var(--navy);border-radius:6px;flex:0 0 auto;margin-top:2px;background:#fff}.check strong{display:block;color:var(--navy)}
+
+    .flow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.step{background:#fbfdff;border:1px solid var(--line);border-radius:16px;padding:18px;position:relative}.num{display:inline-grid;place-items:center;background:var(--navy);color:white;font-weight:900;border-radius:12px;width:42px;height:42px;margin-bottom:12px}.arrow{display:inline-block;margin:4px 0;color:var(--muted);font-weight:700}
+
+    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.mini-card{background:#fbfdff;border:1px solid var(--line);border-radius:16px;padding:18px}.mini-card strong{display:block;color:var(--navy);margin-bottom:6px}
+
+    .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}.coverage-block{background:#fbfdff;border:1px solid var(--line);border-radius:16px;padding:18px}.coverage-block h3{margin-bottom:10px}.two-col{columns:2;column-gap:28px}.two-col li{break-inside:avoid}
+
+    .script-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}.script-card{border-radius:16px;padding:18px;border:1px solid var(--line);background:#fbfdff}.script-card.not{background:#fff5f5;border-color:#efb6b6}
+
+    .btn{display:inline-block;text-decoration:none;background:var(--navy);color:white;font-weight:800;border-radius:999px;padding:12px 18px;margin-top:4px}.btn:hover{opacity:.92}
+ 
+    .optout-visual{position:relative;margin-top:20px;padding:22px;background:linear-gradient(180deg,#fff,#f8fbfe);border:1px solid var(--line);border-radius:20px;overflow:auto}
+
+    .optout-grid{min-width:850px;display:grid;grid-template-columns:210px 80px 235px 90px 235px;grid-template-rows:150px 46px 150px;align-items:center;gap:0}
+
+    .flowbox{min-height:116px;border:5px solid #07124a;border-radius:14px;background:#fff;display:grid;place-items:center;text-align:center;padding:18px;font-weight:750;color:#263342;box-shadow:0 6px 14px rgba(3,26,51,.04)}
+
+    .flowbox.small{font-size:14px;line-height:1.35}.start{grid-column:1;grid-row:2}.upload{grid-column:3;grid-row:1}.verified{grid-column:5;grid-row:1}.fee{grid-column:3;grid-row:3}.lapse{grid-column:5;grid-row:3}
+
+    .conn{display:grid;place-items:center;color:#1b1b1b;font-weight:800;position:relative}.right{grid-column:4;grid-row:1}.right:before{content:'Meets Requirements';position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap;background:#fff;padding:2px 6px;border-radius:999px}.right:after{content:'→';font-size:42px}.down{grid-column:3;grid-row:2}.down:before{content:'Does not meet requirements';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap;background:#fff;padding:2px 8px;border-radius:999px;margin-top:-28px}.down:after{content:'↓';font-size:42px;margin-top:14px}.startconn{grid-column:2;grid-row:2;font-size:42px}.startconn:after{content:'→'}
+
+    .dashed{grid-column:5;grid-row:2;height:70px;border-left:3px dashed #111;justify-self:center;position:relative}.dashed:after{content:'↓';position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);font-size:38px;line-height:1}.back{grid-column:4;grid-row:3;font-size:42px}.back:after{content:'←'}
+ 
+    details{border:1px solid var(--line);border-radius:16px;background:#fff;margin:10px 0;overflow:hidden}summary{cursor:pointer;font-weight:800;color:var(--navy);padding:16px 18px;background:#fbfdff}details p, details ul{padding:0 18px 16px;margin-top:0}.muted{color:var(--muted)}
+
+    .resource-list a{display:flex;justify-content:space-between;gap:18px;text-decoration:none;color:var(--ink);padding:14px 0;border-top:1px solid var(--line)}.resource-list a:first-child{border-top:0}.resource-list span:first-child{font-weight:800;color:var(--navy)}.tag{font-size:12px;font-weight:800;color:var(--navy);background:var(--sky);border-radius:999px;padding:4px 8px;white-space:nowrap}
+
+    footer{background:var(--deep);color:#d4e2ee;padding:28px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:white}
+
+    @media(max-width:850px){.hero{grid-template-columns:1fr}.span-4,.span-5,.span-6,.span-7{grid-column:span 12}.topbar{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}.flow,.mini-grid,.coverage-grid,.script-grid{grid-template-columns:1fr}.two-col{columns:1}}
+
+    @media print{nav,.no-print{display:none}.card,.hero-card{box-shadow:none}header{background:#052b4f}body{background:white}.wrap{max-width:100%;padding:0 14px}main{padding-top:24px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="topbar">
+<div class="logo" aria-label="LeaseGuard">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABkAAAACQCAYAAABQ4qeyAAAACXBIWXMAAC4jAAAuIwF4pT92AAAG/2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4xLWMwMDEgMTE2LmNhODJhZTQsIDIwMjQvMDIvMjItMjE6NTg6NDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNC43IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMDgtMTlUMTY6MDc6NTMtMDY6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI1LTA5LTE5VDE0OjU3OjEzLTA2OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTA5LTE5VDE0OjU3OjEzLTA2OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpiMTRkOGI5Ny05Y2VjLTFjNGMtOGMxMi0yNjBiYzFjYzEzNzAiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDplMGFhMDZlZi03NTUwLTRkNDQtYWU0Yi03OTAyNDYyYWMyYzAiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyODVhMDM3Mi02MmMxLTkzNDgtOWNhNS0zMThhZmQwNGMxNzAiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjI4NWEwMzcyLTYyYzEtOTM0OC05Y2E1LTMxOGFmZDA0YzE3MCIgc3RFdnQ6d2hlbj0iMjAyNC0wOC0xOVQxNjowNzo1My0wNjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjcgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjb252ZXJ0ZWQiIHN0RXZ0OnBhcmFtZXRlcnM9ImZyb20gYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcCB0byBpbWFnZS9wbmciLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjAxNzU2MDM3LTE0ZGUtNGM0Yy1hNjYyLWE4ODQ3OTRkMGJlYiIgc3RFdnQ6d2hlbj0iMjAyNS0wOS0xOVQxNDo1NTo1Ny0wNjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjcgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiMTRkOGI5Ny05Y2VjLTFjNGMtOGMxMi0yNjBiYzFjYzEzNzAiIHN0RXZ0OndoZW49IjIwMjUtMDktMTlUMTQ6NTc6MTMtMDY6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNC43IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVz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" alt="LeaseGuard logo" onerror="this.style.display='none';document.querySelector('.logo-fallback').style.display='block';" />
+<div class="logo-fallback" style="display:none">Lease<span>Guard</span></div>
+</div>
+<nav aria-label="Page sections">
+<a href="#checklist">Launch</a><a href="#overview">Overview</a><a href="#coverage">Coverage</a><a href="#process">Verification</a><a href="#optout">Opt-Out Visual</a><a href="#claims">Claims</a><a href="#faq">FAQ</a><a href="#contacts">Support</a>
+</nav>
+</div>
+<section class="hero">
+<div>
+<span class="eyebrow">Property Team Onboarding Hub</span>
+<h1>LeasePro Liability Waiver Program</h1>
+<p class="lead">Use this onboarding hub as a clear resource for your property managers, leasing agents, operations staff, and accounting contacts. It explains how LeaseGuard's LeasePro Liability Waiver Program works, how residents can satisfy insurance requirements, what LeaseGuard verifies and monitors, and what your property teams should expect during launch and daily operations.</p>
+<p class="sublead">This page should be used as the starting point for each of your property teams. Client-specific charge amounts, the $100,000 coverage limit, GL codes, lease addendum links, training dates, and contacts should be added before deployment.</p>
+</div>
+<aside class="hero-card">
+<h3>Program at a glance</h3>
+<div class="stat"><b>1</b><div><strong>LeasePro helps protect the property.</strong><span class="muted">When a resident does not provide compliant renters insurance, the unit can be placed into the LeasePro liability waiver workflow under the property management company or ownership group.</span></div></div>
+<div class="stat"><b>2</b><div><strong>LeaseGuard verifies resident policies.</strong><span class="muted">Residents who want to opt out upload renters insurance through LeaseGuard's portal for review against the approved requirements.</span></div></div>
+<div class="stat"><b>3</b><div><strong>LeaseGuard monitors compliance.</strong><span class="muted">Approved policies are monitored for lapses, cancellations, expirations, and other compliance issues so onsite teams can stay consistent.</span></div></div>
+</aside>
+</section>
+</div>
+</header>
+ 
+  <main class="wrap">
+<section id="checklist" class="card span-12" style="margin-bottom:22px">
+<span class="pill">Launch Readiness</span>
+<h2>Onboarding checklist for property teams</h2>
+<p class="muted">Complete these items before the first lease signing, renewal launch, or resident communication campaign.</p>
+<div class="checklist">
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Confirm program settings</strong><span class="muted">Verify the approved monthly LeasePro waiver fee, $100,000 coverage limit, properties, launch date, and resident communication timing.</span></div></div>
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Set up the LeasePro charge code</strong><span class="muted">Confirm the correct ledger, GL code, property accounting setup, charge description, and integration mapping.</span></div></div>
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Incorporate the lease addendum</strong><span class="muted">Ensure the lease package clearly explains the insurance requirement, the LeasePro Liability Waiver Program option, the opt-out path, and timing expectations.</span></div></div>
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Confirm resident upload instructions</strong><span class="muted">Make sure leasing teams direct residents to the LeaseGuard upload portal instead of collecting policies manually at the property.</span></div></div>
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Schedule team onboarding with LeaseGuard</strong><span class="muted">Include onsite managers, leasing agents, accounting contacts, regional managers, and central operations stakeholders.</span></div></div>
+<div class="check"><span class="box" aria-hidden="true"></span><div><strong>Confirm support and claims contacts</strong><span class="muted">Document where billing questions, verification questions, resident escalations, and claims notices should be sent.</span></div></div>
+</div>
+<div class="callout"><strong>Schedule onboarding:</strong> Schedule the onboarding call with LeaseGuard before resident communications begin. <a class="btn" href="https://calendly.com/leaseguard-ryen/onboarding-call">Schedule onboarding call</a></div>
+</section>
+ 
+    <section class="grid" id="overview">
+<article class="card span-7">
+<span class="pill">High-Level Overview</span>
+<h2>What the LeasePro Liability Waiver Program is</h2>
+<p>LeasePro is LeaseGuard's Liability Waiver Program. It helps the property management company or ownership group manage resident-caused property damage exposure when a resident does not provide compliant renters insurance. It gives residents a clear choice: participate in the LeasePro liability waiver workflow or opt out by uploading compliant renters insurance through LeaseGuard's portal.</p>
+<ul class="clean">
+<li>Provides a consistent liability waiver program process for residents who have not provided compliant renters insurance.</li>
+<li>Supports the lease insurance requirement without requiring onsite teams to manually verify policies.</li>
+<li>Allows approved resident policies to be verified and monitored by LeaseGuard.</li>
+<li>Creates a repeatable process for move-ins, renewals, lapses, cancellations, and expirations.</li>
+</ul>
+<div class="callout not"><strong>Important:</strong> LeasePro is not renters insurance for residents, not a personal lines policy, and does not make the resident an insured. Residents who want personal renters insurance must buy their own policy and upload it for verification.</div>
+</article>
+ 
+      <aside class="card span-5">
+<span class="pill">Team Summary</span>
+<h2>What property teams need to know</h2>
+<p>Onsite teams should use simple, consistent language with residents. Their role is to explain the lease requirement, direct residents to the upload portal, and follow the approved process.</p>
+<ul class="clean">
+<li>Residents may participate in the LeasePro Liability Waiver Program or opt out by uploading compliant renters insurance.</li>
+<li>Residents must use the LeaseGuard upload portal for verification.</li>
+<li>LeaseGuard reviews the policy; onsite teams should not approve or deny policies manually.</li>
+<li>If a policy fails verification or later lapses, cancels, or expires, the LeasePro liability waiver workflow can apply.</li>
+<li>Current-month charge handling should follow the approved program timing and accounting rules.</li>
+</ul>
+</aside>
+
+      <article class="card span-12" id="coverage">
+<span class="pill">LeasePro Coverage Overview</span>
+<h2>Who is insured, what causes of loss are included, and what limit applies</h2>
+<p class="muted">This is a property-team training summary. Client-specific policy forms, endorsements, limits, sublimits, deductibles, and state requirements should be confirmed in the final program documents.</p>
+<div class="coverage-grid">
+<div class="coverage-block">
+<h3>Who is insured</h3>
+<ul class="clean">
+<li>The property management company, ownership group, or related property entity shown as the insured in the program documents.</li>
+<li>The resident is not insured under the waiver and should not be told they are buying renters insurance.</li>
+<li>Claims are handled through the approved LeasePro Liability Waiver Program and should be submitted by the property management team.</li>
+</ul>
+</div>
+<div class="coverage-block">
+<h3>Coverage limits</h3>
+<ul class="clean">
+<li>The LeasePro Liability Waiver Program coverage limit is $100,000 per occurrence.</li>
+<li>The required limit should be reflected consistently in the lease addendum, resident communications, accounting setup, and onboarding materials.</li>
+<li>Any deductibles, sublimits, exclusions, and special conditions should be reviewed in the final policy and client onboarding materials.</li>
+</ul>
+</div>
+<div class="coverage-block" style="grid-column:span 2">
+<h3>Covered causes of loss</h3>
+<ul class="clean two-col">
+<li>Fire.</li>
+<li>Smoke.</li>
+<li>Explosion originating in the resident premises.</li>
+<li>Falling objects that damage or penetrate the roof or wall of the resident premises.</li>
+<li>Riot or civil commotion.</li>
+<li>Overflow, discharge, or leakage of water in the resident premises from a bath, sink, shower, toilet, clothes washing machine, dishwasher, refrigerator, other appliance owned by the resident, aquarium, or waterbed.</li>
+<li>Freezing of pipes when tenant caused.</li>
+<li>Loss of use/additional living expense and loss of rental income, when included by the approved program terms.</li>
+<li>Sprinkler leakage.</li>
+<li>Bed bug coverage.</li>
+<li>Fungi, mold, or bacteria coverage.</li>
+</ul>
+</div>
+</div>
+<div class="callout"><strong>Program positioning:</strong> LeasePro helps protect the property against covered resident-caused loss. It does not replace the resident's personal renters insurance for personal property, relocation benefits owed to the resident, or resident personal liability outside the approved program terms.</div>
+</article>
+ 
+      <article class="card span-6" id="process">
+<span class="pill">Products &amp; Services</span>
+<h2>LeasePro Liability Waiver Program, verification, and daily monitoring</h2>
+<div class="flow">
+<div class="step"><span class="num">01</span><h3>LeasePro Liability Waiver Program</h3><p>Applies when a resident does not provide compliant renters insurance. The resident may be charged the approved LeasePro waiver fee, and the approved LeasePro Liability Waiver Program responds according to the approved coverage terms.</p></div>
+<div class="step"><span class="num">02</span><h3>Verification service</h3><p>LeaseGuard reviews uploaded renters insurance for the required liability limit, active policy dates, resident name, property address, and other approved program requirements.</p></div>
+<div class="step"><span class="num">03</span><h3>Daily monitoring service</h3><p>LeaseGuard monitors approved resident policies for lapses, cancellations, expirations, and compliance issues that may require the resident to be moved back into the LeasePro liability waiver workflow.</p></div>
+<div class="step"><span class="num">04</span><h3>Support workflow</h3><p>LeaseGuard supports property teams with policy verification questions, compliance status questions, claims routing, and onboarding training.</p></div>
+</div>
+</article>
+
+      <article class="card span-6" id="onboarding">
+<span class="pill">What to Expect</span>
+<h2>Launch and ongoing operating process</h2>
+<div class="mini-grid">
+<div class="mini-card"><strong>Before launch</strong><span class="muted">Program settings, charge codes, lease language, property list, and training dates are confirmed.</span></div>
+<div class="mini-card"><strong>At move-in or renewal</strong><span class="muted">Residents are told they must satisfy the lease insurance requirement through the LeasePro Liability Waiver Program or approved renters insurance.</span></div>
+<div class="mini-card"><strong>When a resident uploads</strong><span class="muted">LeaseGuard verifies the policy and communicates the compliance status through the approved workflow.</span></div>
+<div class="mini-card"><strong>After approval</strong><span class="muted">The policy is monitored for lapse, cancellation, expiration, and other compliance issues.</span></div>
+<div class="mini-card"><strong>If non-compliant</strong><span class="muted">The resident remains in or is moved back into the LeasePro liability waiver workflow according to the approved program timing.</span></div>
+<div class="mini-card"><strong>During claims</strong><span class="muted">The property team gathers documentation and submits the claim through the approved claims path.</span></div>
+</div>
+<div class="callout"><strong>Operational rule:</strong> Property teams should follow the approved workflow instead of making one-off exceptions at the site level. Consistency protects the resident experience, the accounting process, and the approved program.</div>
+</article>
+ 
+      <article class="card span-12" id="optout">
+<span class="pill">Opt-Out Process Visual</span>
+<h2>How renters insurance opt-out and monitoring works</h2>
+<p class="muted">Use this visual during team training to explain what happens after lease signing when a resident chooses to upload renters insurance instead of participating in the LeasePro liability waiver workflow.</p>
+<div class="optout-visual" role="img" aria-label="Opt-out workflow showing resident lease signing, upload to verification portal, fee handling, and ongoing monitoring.">
+<div class="optout-grid">
+<div class="flowbox start">Resident Lease Signing</div>
+<div class="conn startconn" aria-hidden="true"></div>
+<div class="flowbox upload">Upload Renters Insurance to Verification Portal</div>
+<div class="conn right" aria-hidden="true"></div>
+<div class="flowbox verified small">LeasePro waiver fee is not charged. If the charge already exists in the ledger, it will be ended starting the following month according to program timing. Renters insurance is monitored moving forward.</div>
+<div class="conn down" aria-hidden="true"></div>
+<div class="flowbox fee small">Resident is charged the LeasePro waiver fee, and the unit is included under the approved LeasePro Liability Waiver Program. Resident takes no additional action unless they want to opt out.</div>
+<div class="dashed" aria-hidden="true"></div>
+<div class="flowbox lapse small">Policy lapses, cancels, expires, or otherwise becomes non-compliant.</div>
+<div class="conn back" aria-hidden="true"></div>
+</div>
+</div>
+<div class="callout"><strong>Staff reminder:</strong> Residents who opt out must upload their policy through LeaseGuard's portal. If the policy does not meet requirements, or if it later lapses, cancels, or expires, the LeasePro liability waiver workflow applies.</div>
+</article>
+
+      <article class="card span-12" id="resident-messaging">
+<span class="pill">Resident Messaging</span>
+<h2>How to explain it, and what not to say</h2>
+<p class="muted">Leasing teams should use approved, neutral language. They should explain the lease requirement and the resident's options, not sell or advise on personal insurance.</p>
+<div class="script-grid">
+<div class="script-card">
+<h3>Use this type of language</h3>
+<ul class="clean">
+<li>"Your lease requires liability insurance. You can satisfy that requirement through the LeasePro Liability Waiver Program or by uploading compliant renters insurance through LeaseGuard."</li>
+<li>"LeaseGuard verifies uploaded policies for compliance with the property requirements."</li>
+<li>"If your policy is approved, it will be monitored for lapse, cancellation, or expiration."</li>
+<li>"If your policy does not meet requirements or later becomes non-compliant, the LeasePro waiver fee may apply."</li>
+</ul>
+</div>
+<div class="script-card not">
+<h3>Do not say this</h3>
+<ul class="clean">
+<li>Do not call LeasePro renters insurance.</li>
+<li>Do not tell residents they are buying an insurance policy through the property.</li>
+<li>Do not tell residents their personal belongings are covered by LeasePro.</li>
+<li>Do not approve, deny, or interpret resident policies at the site level.</li>
+<li>Do not promise claim outcomes, coverage decisions, or refunds outside the approved process.</li>
+</ul>
+</div>
+</div>
+</article>
+ 
+      <article class="card span-6" id="claims">
+<span class="pill">Claims</span>
+<h2>Claims process for property teams</h2>
+<p>Claims should be filed by a property management team member, not by the resident. The property team should gather documentation and submit the claim through the approved claims path.</p>
+<ul class="clean">
+<li>Collect incident details, photos, repair invoices, and supporting documentation.</li>
+<li>Email new claims to <a href="mailto:newclaims@markel.com">newclaims@markel.com</a> and copy <a href="mailto:claims@leaseguard.com">claims@leaseguard.com</a>.</li>
+<li>Include the date of loss, property name, unit number, resident name, description of loss, and property contact.</li>
+<li>Watch for carrier follow-up and respond quickly to keep the claim moving.</li>
+<li>Contact LeaseGuard for updates or help facilitating carrier communication.</li>
+</ul>
+<div class="callout warning"><strong>Have ready:</strong> date of loss, policy number, insured name, details of loss, photos, invoices, and property team contact information.</div>
+</article>
+ 
+      <section class="card span-6" id="faq">
+<span class="pill">Staff FAQ</span>
+<h2>Frequently asked questions</h2>
+<details open><summary>Is LeasePro renters insurance?</summary><p>No. LeasePro is LeaseGuard's Liability Waiver Program. It is not renters insurance, not a personal lines insurance policy, and does not make the resident an insured.</p></details>
+<details><summary>Are residents insured under the waiver?</summary><p>No. The resident is not insured under the waiver. The property management company, ownership group, or related property entity is the insured and beneficiary of the tenant legal liability coverage for the unit.</p></details>
+<details><summary>What are the resident benefits?</summary><p>Residents benefit because the coverage helps protect the insured from covered resident-caused property damage, which can reduce the need for the insured to pursue subrogation or recovery against the resident for covered damages. The LeasePro Liability Waiver Program also helps residents maintain compliance with their lease insurance requirement when they have not provided qualifying renters insurance.</p></details>
+<details><summary>Can a resident opt out of the waiver?</summary><p>Yes. A resident can opt out anytime during the lease term by providing proof of qualifying renters insurance through the LeaseGuard upload portal. The associated waiver fee is ended starting the following month as long as the resident maintains qualifying coverage.</p></details>
+<details><summary>When a resident opts out of the waiver, will they get a refund?</summary><p>No. No refunds or prorates are administered when a resident opts out. Once a resident successfully opts out, the waiver fee is ended from the resident ledger starting the following month.</p></details>
+<details><summary>What is LeaseGuard verifying?</summary><p>LeaseGuard reviews the uploaded policy against the approved requirements, which may include liability limit, policy status, effective dates, resident name, property address, and other client-specific requirements.</p></details>
+<details><summary>What is LeaseGuard monitoring?</summary><p>LeaseGuard monitors approved resident policies for lapse, cancellation, expiration, and other compliance issues that may cause the resident to move back into the LeasePro liability waiver workflow.</p></details>
+<details><summary>What happens if a resident's policy does not meet requirements?</summary><p>The resident may be charged the LeasePro waiver fee, and the unit may be included under the approved LeasePro Liability Waiver Program according to the approved terms.</p></details>
+<details><summary>Can onsite teams remove current-month charges?</summary><p>Current-month charge handling should follow the approved program rules. If a policy is successfully verified, the LeasePro waiver fee is ended starting the following month rather than through a one-off site-level exception.</p></details>
+<details><summary>Who should file a claim?</summary><p>A property management team member should file the claim. Residents should not file claims directly under the approved LeasePro Liability Waiver Program.</p></details>
+</section>
+ 
+      <section class="card span-12" id="contacts">
+<span class="pill">Support</span>
+<h2>LeaseGuard contacts and key links</h2>
+<div class="grid">
+<div class="span-4"><h3>General support</h3><p><a href="mailto:support@leaseguard.com">support@leaseguard.com</a><br><a href="tel:18558053273">(855) 805-3273</a><br><span class="muted">Monday-Friday, 8 AM-6 PM MDT</span></p></div>
+<div class="span-4"><h3>Resident upload portal</h3><p><a href="https://leaseguard.com/tenantupload">leaseguard.com/tenantupload</a><br><span class="muted">Use for renters insurance policy uploads and verification.</span></p></div>
+<div class="span-4"><h3>Claims support</h3><p><a href="mailto:newclaims@markel.com">newclaims@markel.com</a><br><a href="mailto:claims@leaseguard.com">claims@leaseguard.com</a><br><span class="muted">Copy LeaseGuard on claim submissions.</span></p></div>
+</div>
+<div class="callout"><strong>Onboarding call:</strong> Schedule the LeaseGuard onboarding call here. <a class="btn" href="https://calendly.com/leaseguard-ryen/onboarding-call">Schedule onboarding call</a></div>
+</section>
+</section>
+</main>
+ 
+</body>
+</html>
